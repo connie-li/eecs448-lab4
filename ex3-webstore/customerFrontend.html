@@ -5,6 +5,18 @@
         <title>Exercise 3: Web Store - Lab 4, EECS 448</title>
     </head>
     <body>
-    	
+    	<div id="products">
+            <form id="product-chooser" action="customerBackend.php" method="post">
+            	<input type="radio" name="prod" value="prod1">Product 1<br>
+            	<input type="radio" name="prod" value="prod2">Product 2<br>
+            	<input type="radio" name="prod" value="prod3">Product 3<br>
+            </form>
+            <form id="ship-chooser" action="customerBackend.php" method="post">
+            	<input type="radio" name="ship" value="ship-free">Free 7 day<br>
+            	<input type="radio" name="ship" value="ship-overnight">$50.00 overnight<br>
+            	<input type="radio" name="ship" value="ship-3day">$5.00 three-day<br>
+            	<input type="submit" name="submit" value="Submit">
+            </form>
+            <button name="reset">Reset</button>
     </body>
 </html>
