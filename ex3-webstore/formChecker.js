@@ -9,6 +9,8 @@ const alertDirectory = {
 
 /** Checks all inputs for validity; responds to the user if not valid.
  * 
+/** Checks all inputs for validity; shows responses to the user if not valid.
+ * @return {boolean} true if all inputs are valid, else false.
  */
 function validate() {
     let checklist = {
@@ -27,23 +29,28 @@ function validate() {
     checklist.user = checkUserName();
     checklist.pw = checkPW();
     
-    let stopSubmit = false;
+    let valid = true;
     
     for(let x in checklist) {
         if(checklist.hasOwnProperty(x)) {
-            if(checklist.x == false) {
-                showAlert(alertDirectory.x);
-                stopSubmit = true;
+            if(checklist[x] == false) {
+                showAlert(alertDirectory[x]);
+                valid = false;
             }
+			else {
+				hideAlert(alertDirectory[x]);
+			}
         }
     }
-    if(stopSubmit == true) {
-        event.preventDefault();
-    }
+    return(valid);
 }
 
 function showAlert(alertID) {
     document.getElementById(alertID).style.display = "inline";
+}
+
+function hideAlert(alertID) {
+	document.getElementById(alertID).style.display = "none";
 }
 
 /** Checks that the given quantity is valid, ie. greater than or equal to 0 and not blank.
