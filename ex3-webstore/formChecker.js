@@ -12,6 +12,13 @@ function checkQuantity(inputName) {
     }
 }
 
+/** Check whether the shipping option is valid, ie. an option has been selected.
+ * @return true if valid, else false.
+ */
+function checkShipping() {
+    return(document.getElementById("shipping").elements["ship"].value != "");
+}
+
 /** Check whether the username is valid, using the email input's built-in validation.
  * My implementation and use of the matches() function was inspired by https://www.bennadel.com/blog/3476-checking-to-see-if-an-element-has-a-css-pseudo-class-in-javascript.htm (accessed 10-06-2019), though I did not copy their code exactly.
  * @return true if the username is valid, else false.
