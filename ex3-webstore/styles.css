@@ -5,7 +5,30 @@ body {
     background-color: #363636;
 }
 
+div {
+    margin-top: 20px;
+}
+
+#content {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .subtitle {
     font-size: 150%;
     margin:auto;
+}
+
+#ship-chooser {
+    margin: 10px;
+}
+
+button {
+    padding: 8px 10px 8px;
+    margin: 0px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: bold;
+    background: #e6e6e6;
 }
