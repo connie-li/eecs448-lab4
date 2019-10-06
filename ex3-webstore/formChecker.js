@@ -51,7 +51,7 @@ function showAlert(alertID) {
  * @return {boolean} true if the quantity is valid, else false.
  */
 function checkQuantity(inputName) {
-    let quantity = document.getElementById("products").elements[inputName].value;
+    let quantity = document.getElementById(inputName).value;
     if(quantity < 0 || quantity == "") {
         return false;
     }
@@ -64,7 +64,7 @@ function checkQuantity(inputName) {
  * @return {boolean} true if valid, else false.
  */
 function checkShipping() {
-    return(document.getElementById("shipping").elements["ship"].value != "");
+    return(document.getElementById("form").elements["ship"].value != "");
 }
 
 /** Checks whether the username is valid, using the email input's built-in validation.
@@ -80,5 +80,5 @@ function checkUserName() {
  * @return {boolean} true if the password is valid, else false.
  */
 function checkPW() {
-    return(document.getElementById("login").elements["password"].value != "");
+    return(document.getElementById("password").value != "");
 }
