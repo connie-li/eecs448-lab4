@@ -15,16 +15,37 @@ div {
     margin-right: auto;
 }
 
+fieldset {
+    padding: 20px;
+    margin: 20px 5px;
+}
 .subtitle {
     font-size: 150%;
+    padding: 0px 5px;
     margin:auto;
 }
 
-#ship-chooser {
-    margin: 10px;
+.inner-content {
+    width: 40%;
+    vertical-align: middle;
+    margin: auto;
 }
 
-button {
+label {
+    padding-right: 10px;
+}
+
+input[type="number"] {
+    width: 30px;
+    height: 15px;
+}
+
+#buttons {
+    text-align: center;
+    border: none;
+}
+
+.button {
     padding: 8px 10px 8px;
     margin: 0px 5px;
     border-radius: 3px;
@@ -42,6 +63,6 @@ button {
 }
 
 #ex-email {
-    color:white;
+    color:azure;
     text-decoration: underline;
 }

@@ -7,32 +7,43 @@
         <script src="formChecker.js"></script>
     </head>
     <body>
+        <h4>EECS 448, Exercise 3: Web Store</h4>
         <div id="content">
             <h1>Web Store</h1>
-        	<div id="products-box">
-                <p class="subtitle">Products</p>
-                <form id="products" action="customerBackend.php" method="post">
-                    <p>Product1</p><input type="number" name="quant-p1" value="0" min="0"><div class="alert" id="alert1">Quantity must be greater than or equal to 0.</div><br>
-                    <p>Product2</p><input type="number" name="quant-p2" value="0" min="0"><div class="alert" id="alert2">Quantity must be greater than or equal to 0.</div><br>
-                    <p>Product3</p><input type="number" name="quant-p3" value="0" min="0"><div class="alert" id="alert3">Quantity must be greater than or equal to 0.</div><br>
-                </form>
-            </div>
-            <div id="shipping-box">
-                <p class="subtitle" >Shipping:</p><div class="alert" id="alert-ship">Please choose a shipping option.</div>
-                <form id="shipping" action="customerBackend.php" method="post">
-                	<input type="radio" name="ship" value="ship-free">Free 7 day<br>
-                	<input type="radio" name="ship" value="ship-overnight">$50.00 overnight<br>
-                	<input type="radio" name="ship" value="ship-3day">$5.00 three-day<br>
-                </form>
-            </div>
-            <div id="login-box">
-                <p class="subtitle">Log In</p>
-                <form id="login">
-                    <p>Username: <input type="email" name="username" id="username" placeholder="Username" required></p><div class="alert" id="alert-user">Please enter an email username.  For example, <span id="ex-email">serbrienne@tarth.gov</span>.</div>
-                    <p>Password: <input type="text" name="password" id="password" placeholder="Password"></p><div class="alert" id="alert-pw">Password field cannot be empty.</div>
-                </form>
-            </div>
-            <div id="buttons"><button name="reset">Reset</button><button name="submit">Submit Order</button></div>
+            <form id="form" action="customerBackend.php" method="post">
+                <fieldset id="products-box">
+                    <legend class="subtitle">Products</legend>
+                    <div class="inner-content">
+                        <label for="quant-p1">Product1</label><input type="number" name="quant-p1" id="quant-p1" value="0" min="0">
+                        <div class="alert" id="alert1">Quantity must be greater than or equal to 0.</div><br>
+                        <label for="quant-p2">Product2</label><input type="number" name="quant-p2" id="quant-p2" value="0" min="0">
+                        <div class="alert" id="alert2">Quantity must be greater than or equal to 0.</div><br>
+                        <label for="quant-p3">Product3</label><input type="number" name="quant-p3" id="quant-p3" value="0" min="0">
+                        <div class="alert" id="alert3">Quantity must be greater than or equal to 0.</div><br>
+                    </div>
+                </fieldset>
+                <fieldset id="shipping-box">
+                    <legend class="subtitle" >Shipping:</legend>
+                    <div class="alert" id="alert-ship">Please choose a shipping option.</div>
+                    <div class="inner-content">
+                        <input type="radio" name="ship" value="ship-free" id="ship0"><label for="ship0">Free 7 day</label><br>
+                        <input type="radio" name="ship" value="ship-overnight" id="ship1"><label for="ship1">$50.00 overnight</label><br>
+                        <input type="radio" name="ship" value="ship-3day" id="ship2"><label for="ship2">$5.00 three-day</label><br>
+                    </div>
+                </fieldset>
+                <fieldset id="login-box">
+                    <legend class="subtitle">Log In</legend>
+                    <div class="inner-content">
+                        <p><label for="username">Username: </label><input type="email" name="username" id="username" placeholder="Username" required></p>
+                        <div class="alert" id="alert-user">Please enter an email username.  For example, <span id="ex-email">serbrienne@tarth.gov</span>.</div>
+                        <p><label for="password">Password: </label><input type="text" name="password" id="password" placeholder="Password"></p>
+                        <div class="alert" id="alert-pw">Password field cannot be empty.</div>
+                    </div>
+                </fieldset>
+                <fieldset id="buttons">
+                    <input type="button" name="reset" value="Reset" class="button"><input type="submit" name="submit" value="Submit Order" class="button" onsubmit="validate();">
+                </fieldset>
+            </form>
         </div>
     </body>
 </html>
