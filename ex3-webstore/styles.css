@@ -26,9 +26,14 @@ fieldset {
 }
 
 .inner-content {
-    width: 40%;
+    width: 50%;
     vertical-align: middle;
     margin: auto;
+}
+
+.inner-content p {
+	margin: 2px;
+	display: inline;
 }
 
 label {

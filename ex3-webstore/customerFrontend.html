@@ -13,18 +13,18 @@
                 <fieldset id="products-box">
                     <legend class="subtitle">Products</legend>
                     <div class="inner-content">
-                        <label for="quant-p1">Product1</label><input type="number" name="quant-p1" id="quant-p1" value="0" min="0">
+                        <p><label for="quant-p1">Product1</label><input type="number" name="quant-p1" id="quant-p1" value="0" min="0"></p>
                         <div class="alert" id="alert1">Quantity must be greater than or equal to 0.</div><br>
-                        <label for="quant-p2">Product2</label><input type="number" name="quant-p2" id="quant-p2" value="0" min="0">
+                        <p><label for="quant-p2">Product2</label><input type="number" name="quant-p2" id="quant-p2" value="0" min="0"></p>
                         <div class="alert" id="alert2">Quantity must be greater than or equal to 0.</div><br>
-                        <label for="quant-p3">Product3</label><input type="number" name="quant-p3" id="quant-p3" value="0" min="0">
+                        <p><label for="quant-p3">Product3</label><input type="number" name="quant-p3" id="quant-p3" value="0" min="0"></p>
                         <div class="alert" id="alert3">Quantity must be greater than or equal to 0.</div><br>
                     </div>
                 </fieldset>
                 <fieldset id="shipping-box">
                     <legend class="subtitle" >Shipping:</legend>
-                    <div class="alert" id="alert-ship">Please choose a shipping option.</div>
-                    <div class="inner-content">
+					<div class="inner-content">
+                    	<div class="alert" id="alert-ship">Please choose a shipping option.</div>
                         <input type="radio" name="ship" value="ship-free" id="ship0"><label for="ship0">Free 7 day</label><br>
                         <input type="radio" name="ship" value="ship-overnight" id="ship1"><label for="ship1">$50.00 overnight</label><br>
                         <input type="radio" name="ship" value="ship-3day" id="ship2"><label for="ship2">$5.00 three-day</label><br>
@@ -40,7 +40,7 @@
                     </div>
                 </fieldset>
                 <fieldset id="buttons">
-                    <input type="button" name="reset" value="Reset" class="button"><input type="submit" name="submit" value="Submit Order" class="button">
+                    <input type="reset" name="reset" value="Reset" class="button"><input type="submit" name="submit" value="Submit Order" class="button">
                 </fieldset>
             </form>
         </div>
