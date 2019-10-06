@@ -3,7 +3,7 @@
  * @return {boolean} true if the quantity is valid, else false.
  */
 function checkQuantity(inputName) {
-    let quantity = document.getElementById("product-chooser").elements[inputName].value;
+    let quantity = document.getElementById("products").elements[inputName].value;
     if(quantity < 0 || quantity == "") {
         return false;
     }

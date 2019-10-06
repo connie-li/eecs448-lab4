@@ -4,24 +4,32 @@
         <meta charset="utf-8">
         <title>Exercise 3: Web Store - Lab 4, EECS 448</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="formChecker.js"></script>
     </head>
     <body>
         <div id="content">
             <h1>Web Store</h1>
-        	<div id="products">
+        	<div id="products-box">
                 <p class="subtitle">Products</p>
-                <form id="product-chooser" action="customerBackend.php" method="post">
+                <form id="products" action="customerBackend.php" method="post">
                     <p>Product1</p><input type="number" name="quantity-prod1" value="0" min="0"><br>
                     <p>Product2</p><input type="number" name="quantity-prod2" value="0" min="0"><br>
                     <p>Product3</p><input type="number" name="quantity-prod3" value="0" min="0"><br>
                 </form>
             </div>
-            <div id="shipping">
+            <div id="shipping-box">
                 <p class="subtitle" >Choose a shipping option:</p>
-                <form id="ship-chooser" action="customerBackend.php" method="post">
+                <form id="shipping" action="customerBackend.php" method="post">
                 	<input type="radio" name="ship" value="ship-free">Free 7 day<br>
                 	<input type="radio" name="ship" value="ship-overnight">$50.00 overnight<br>
                 	<input type="radio" name="ship" value="ship-3day">$5.00 three-day<br>
+                </form>
+            </div>
+            <div id="login-box">
+                <p class="subtitle">Log In</p>
+                <form id="login">
+                    <p>Username: <input type="text" name="username" id="username" placeholder="Username"></p>
+                    <p>Password: <input type="text" name="password" id="password" placeholder="Password"></p>
                 </form>
             </div>
             <div id="buttons"><button name="reset">Reset</button><button name="submit">Submit Order</button></div>
