@@ -27,7 +27,7 @@
     	$score++;
     }
 
-    echo '<div>You scored ', $score / 5, ' with ', $score, ' correct answers.</div>';
+    echo '<h4>You scored ', $score / 5 * 100, '% with ', $score, ' correct answers.</h4>';
 
     echo "<div><p>Question 1: Who is Basil the basil's best friend?</p>";
     echo '<p>You answered: ', $q1answer, '</p>';
