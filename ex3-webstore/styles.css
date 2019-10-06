@@ -1,0 +1,11 @@
+/* Used similar overall theme that I used for my Lab3, Ex3 profile page, including some reused styles. */
+body {
+    font-family: "Segoe UI Light", sans-serif;
+    color: white;
+    background-color: #363636;
+}
+
+.subtitle {
+    font-size: 150%;
+    margin:auto;
+}

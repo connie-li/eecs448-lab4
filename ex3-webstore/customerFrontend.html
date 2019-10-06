@@ -3,14 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Exercise 3: Web Store - Lab 4, EECS 448</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-    	<div id="products">
+        <h1>Web Store</h1>
+    	<div class="subtitle" id="products">
             <form id="product-chooser" action="customerBackend.php" method="post">
             	<input type="radio" name="prod" value="prod1">Product 1<br>
             	<input type="radio" name="prod" value="prod2">Product 2<br>
             	<input type="radio" name="prod" value="prod3">Product 3<br>
             </form>
+        </div>
+        <div class="subtitle" id="shipping">
+            <p>Choose a shipping option:</p>
             <form id="ship-chooser" action="customerBackend.php" method="post">
             	<input type="radio" name="ship" value="ship-free">Free 7 day<br>
             	<input type="radio" name="ship" value="ship-overnight">$50.00 overnight<br>
@@ -18,5 +23,6 @@
             	<input type="submit" name="submit" value="Submit">
             </form>
             <button name="reset">Reset</button>
+        </div>
     </body>
 </html>
