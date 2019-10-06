@@ -1,3 +1,16 @@
+const form = document.getElementById("form");
+form.onsubmit = checkSubmit;	/* event listener */
+
+/** Checks that form is valid before submitting data to the back-end.  Calls validate to check form validity: if form is valid, do nothing; else stop the form submission.
+ *
+ */
+function checkSubmit(event) {
+    let valid = validate();
+    if(!valid) {
+        event.preventDefault();
+    }
+}
+
 const alertDirectory = {
     prod1 : "alert1",
     prod2 : "alert2",
@@ -7,8 +20,6 @@ const alertDirectory = {
     pw : "alert-pw"
 };
 
-/** Checks all inputs for validity; responds to the user if not valid.
- * 
 /** Checks all inputs for validity; shows responses to the user if not valid.
  * @return {boolean} true if all inputs are valid, else false.
  */
