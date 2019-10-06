@@ -32,3 +32,16 @@ button {
     font-weight: bold;
     background: #e6e6e6;
 }
+
+.alert {
+    color: #ff4242;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    display: none;
+    padding: 0px 10px;
+}
+
+#ex-email {
+    color:white;
+    text-decoration: underline;
+}

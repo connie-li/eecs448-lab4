@@ -12,13 +12,13 @@
         	<div id="products-box">
                 <p class="subtitle">Products</p>
                 <form id="products" action="customerBackend.php" method="post">
-                    <p>Product1</p><input type="number" name="quantity-prod1" value="0" min="0"><br>
-                    <p>Product2</p><input type="number" name="quantity-prod2" value="0" min="0"><br>
-                    <p>Product3</p><input type="number" name="quantity-prod3" value="0" min="0"><br>
+                    <p>Product1</p><input type="number" name="quant-p1" value="0" min="0"><div class="alert">Quantity must be greater than or equal to 0.</div><br>
+                    <p>Product2</p><input type="number" name="quant-p2" value="0" min="0"><div class="alert">Quantity must be greater than or equal to 0.</div><br>
+                    <p>Product3</p><input type="number" name="quant-p3" value="0" min="0"><div class="alert">Quantity must be greater than or equal to 0.</div><br>
                 </form>
             </div>
             <div id="shipping-box">
-                <p class="subtitle" >Choose a shipping option:</p>
+                <p class="subtitle" >Shipping:</p><div class="alert">Please choose a shipping option.</div>
                 <form id="shipping" action="customerBackend.php" method="post">
                 	<input type="radio" name="ship" value="ship-free">Free 7 day<br>
                 	<input type="radio" name="ship" value="ship-overnight">$50.00 overnight<br>
@@ -28,8 +28,8 @@
             <div id="login-box">
                 <p class="subtitle">Log In</p>
                 <form id="login">
-                    <p>Username: <input type="email" name="username" id="username" placeholder="Username" required></p>
-                    <p>Password: <input type="text" name="password" id="password" placeholder="Password"></p>
+                    <p>Username: <input type="email" name="username" id="username" placeholder="Username" required></p><div class="alert">Please enter an email username.  For example, <span id="ex-email">serbrienne@tarth.gov</span>.</div>
+                    <p>Password: <input type="text" name="password" id="password" placeholder="Password"></p><div class="alert">Password field cannot be empty.</div>
                 </form>
             </div>
             <div id="buttons"><button name="reset">Reset</button><button name="submit">Submit Order</button></div>
